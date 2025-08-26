@@ -1,0 +1,381 @@
+/* Navtara International - Essential Page Styles */
+:root {
+    --navtara-primary: #3b82f6;
+    --navtara-secondary: #2563eb;
+    --navtara-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    --navtara-text: #1f2937;
+    --navtara-light: #f8fafc;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--navtara-text);
+    background-color: #ffffff;
+}
+
+.site { 
+    min-height: 100vh; 
+}
+
+/* Header Styles */
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.elementor { 
+    width: 100%; 
+}
+
+.elementor-element { 
+    position: relative; 
+}
+
+.e-con-boxed { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.e-con-full { 
+    width: 100%; 
+}
+
+.e-flex { 
+    display: flex; 
+    align-items: center; 
+}
+
+.e-con { 
+    padding: 20px 0; 
+}
+
+.e-parent { 
+    flex-wrap: wrap; 
+}
+
+.e-child { 
+    flex: 1; 
+}
+
+/* Logo */
+.hfe-site-logo-img { 
+    height: 60px; 
+    width: auto; 
+}
+
+/* Navigation */
+.main-navigation ul { 
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+    gap: 30px;
+}
+
+.main-navigation a { 
+    text-decoration: none; 
+    color: var(--navtara-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover { 
+    color: var(--navtara-primary); 
+}
+
+/* Breadcrumb */
+.breadcrumb-wrap {
+    margin-top: 100px;
+    background: var(--navtara-gradient);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcrumb-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+}
+
+.extice-woocommerce-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.woocommerce-breadcrumb {
+    text-align: center;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+}
+
+.woocommerce-breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.woocommerce-breadcrumb a:hover { 
+    opacity: 0.8; 
+}
+
+.woocommerce-breadcrumb span { 
+    margin: 0 10px; 
+}
+
+/* Content */
+#content { 
+    padding: 60px 0; 
+}
+
+.col-full { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Elementor Widgets */
+.elementor-widget-container { 
+    width: 100%; 
+}
+
+.elementor-heading-title { 
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    color: var(--navtara-text);
+}
+
+.elementor-icon-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.elementor-icon-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.elementor-icon-list-icon {
+    margin-right: 15px;
+    color: var(--navtara-primary);
+    font-size: 1.2rem;
+}
+
+.elementor-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: var(--navtara-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.elementor-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+.elementor-button-icon { 
+    margin-right: 8px; 
+}
+
+/* Service/Product Grid */
+.service-grid,
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.service-card,
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--navtara-light);
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--navtara-text);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--navtara-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-navigation ul { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .extice-woocommerce-title { 
+        font-size: 2rem; 
+    }
+    
+    .breadcrumb-wrap { 
+        padding: 60px 0; 
+    }
+    
+    .e-flex { 
+        flex-direction: column; 
+    }
+    
+    .service-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Footer placeholder */
+footer { 
+    background: var(--navtara-text);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+/* Gallery specific styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--navtara-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 0.9;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    border: 2px solid var(--navtara-primary);
+    background: transparent;
+    color: var(--navtara-primary);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--navtara-primary);
+    color: white;
+}

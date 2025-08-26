@@ -1,0 +1,190 @@
+/* Navtara International Custom Styles */
+
+/* Brand Colors - Based on professional textile company branding */
+:root {
+    --navtara-primary: #2563eb; /* Professional blue */
+    --navtara-secondary: #f59e0b; /* Golden yellow */
+    --navtara-accent: #059669; /* Teal green */
+    --navtara-dark: #1e293b; /* Dark slate */
+    --navtara-text: #374151; /* Gray text */
+    --navtara-light: #f8fafc; /* Light background */
+    --navtara-border: #e5e7eb; /* Light border */
+}
+
+/* Override theme color variables */
+.elementor-widget {
+    --accent: var(--navtara-primary);
+    --highligh: var(--navtara-secondary);
+    --border: var(--navtara-border);
+    --background: var(--navtara-light);
+}
+
+/* Button Colors */
+.elementor-button,
+.button,
+.btn,
+.elementor-button-wrapper .elementor-button,
+.elementor-widget-button .elementor-button {
+    background-color: var(--navtara-primary) !important;
+    border-color: var(--navtara-primary) !important;
+    color: white !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.elementor-button:hover,
+.button:hover,
+.btn:hover,
+.elementor-button-wrapper .elementor-button:hover,
+.elementor-widget-button .elementor-button:hover {
+    background-color: var(--navtara-secondary) !important;
+    border-color: var(--navtara-secondary) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Heading colors */
+.elementor-widget-heading .elementor-heading-title,
+h1, h2, h3, h4, h5, h6 {
+    color: var(--navtara-dark) !important;
+}
+
+/* Mobile Background Image Fix - Allow background images on mobile */
+@media screen and (max-width: 768px) {
+    .e-con.e-parent:nth-of-type(n + 2):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n + 3):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n + 4):not(.e-lazyloaded):not(.e-no-lazyload) {
+        background-image: inherit !important;
+    }
+    
+    .e-con.e-parent:nth-of-type(n + 2):not(.e-lazyloaded):not(.e-no-lazyload) *,
+    .e-con.e-parent:nth-of-type(n + 3):not(.e-lazyloaded):not(.e-no-lazyload) *,
+    .e-con.e-parent:nth-of-type(n + 4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: inherit !important;
+    }
+}
+
+@media screen and (max-height: 1024px) {
+    .e-con.e-parent:nth-of-type(n + 3):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n + 3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: inherit !important;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .e-con.e-parent:nth-of-type(n + 2):not(.e-lazyloaded):not(.e-no-lazyload),
+    .e-con.e-parent:nth-of-type(n + 2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+        background-image: inherit !important;
+    }
+}
+
+/* Link colors */
+a {
+    color: var(--navtara-primary) !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: var(--navtara-secondary) !important;
+}
+
+/* Icon colors and fixes */
+.elementor-icon,
+.eicon,
+.fa,
+.fas,
+.fab,
+.far {
+    color: var(--navtara-primary) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 1em !important;
+}
+
+.elementor-icon:hover {
+    color: var(--navtara-secondary) !important;
+}
+
+/* Navigation menu colors */
+.elementor-nav-menu--main .elementor-item {
+    color: var(--navtara-text) !important;
+    font-weight: 500 !important;
+}
+
+.elementor-nav-menu--main .elementor-item:hover,
+.elementor-nav-menu--main .elementor-item.elementor-item-active {
+    color: var(--navtara-primary) !important;
+}
+
+/* Icon list styling */
+.elementor-icon-list-item {
+    color: var(--navtara-text) !important;
+}
+
+.elementor-icon-list-icon {
+    color: var(--navtara-secondary) !important;
+}
+
+/* Progress bars */
+.elementor-progress-bar {
+    background-color: var(--navtara-primary) !important;
+}
+
+/* Counters */
+.elementor-counter-number-wrapper {
+    color: var(--navtara-primary) !important;
+}
+
+/* Custom styling for missing/broken icons */
+.missing-icon,
+.icon-placeholder {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: var(--navtara-primary) !important;
+    color: white !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+/* Fix for Font Awesome icons */
+.fa:before,
+.fas:before,
+.fab:before,
+.far:before {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* Ensure icons are visible */
+.elementor-icon i {
+    font-size: inherit !important;
+    display: inline-block !important;
+}
+
+/* Footer styling */
+.elementor-widget-text-editor p {
+    color: var(--navtara-text) !important;
+}
+
+/* Logo container improvements */
+.hfe-site-logo-img {
+    max-height: 60px !important;
+    width: auto !important;
+}
+
+/* Accent elements */
+.elementor-widget-divider .elementor-divider-separator {
+    border-top-color: var(--navtara-primary) !important;
+}
+
+/* Image overlays */
+.elementor-image-box:hover .elementor-image-box-img img {
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease !important;
+}

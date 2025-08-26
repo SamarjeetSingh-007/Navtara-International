@@ -1,0 +1,25 @@
+/* Navtara overrides
+   Put any custom rules here. This file is loaded last in <head> so it can override earlier styles.
+   Use specific selectors and `!important` only when necessary.
+
+   Example overrides:
+   .elementor-widget-heading .elementor-heading-title { color: #111 !important; }
+   .elementor-widget-container img { max-width: 100% !important; height: auto !important; }
+*/
+
+/* Add your overrides below */
+
+/* Strong override for the hero heading on the homepage (elementor element 1ec54d8) */
+.elementor-132 .elementor-element.elementor-element-1ec54d8 .elementor-heading-title {
+   /* explicit color to override var(--e-global-color-accent) */
+   color: #111 !important;
+   /* explicit font sizing/weight if you want to adjust the large heading */
+   font-weight: 700 !important;
+   /* If you need a larger size, uncomment and tune the next line */
+   /* font-size: 64px !important; */
+}
+
+/* Fallback: override the generic widget heading as well (less specific) */
+.elementor-widget-heading .elementor-heading-title {
+   color: #111 !important;
+}

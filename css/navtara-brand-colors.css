@@ -1,0 +1,885 @@
+/* Navtara International - Custom Brand Colors & Styling */
+
+/* Brand Color Palette - Blue to Teal Gradient matching logo */
+:root {
+  --navtara-primary: #1e40af;
+  --navtara-secondary: #0ea5e9;
+  --navtara-accent: #06b6d4;
+  --navtara-light: #22d3ee;
+  --navtara-gradient: linear-gradient(135deg, #1e40af 0%, #0ea5e9 50%, #06b6d4 100%);
+  --navtara-gradient-reverse: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 50%, #1e40af 100%);
+}
+
+/* Change working process icon colors to match brand */
+.elementor-element-61b7bbc .elementor-icon-box-icon .elementor-icon,
+.elementor-element-364d26f .elementor-icon-box-icon .elementor-icon,
+.elementor-element-3047cff .elementor-icon-box-icon .elementor-icon,
+.elementor-element-33ded01 .elementor-icon-box-icon .elementor-icon {
+  color: white !important;
+  background: var(--navtara-gradient) !important;
+  border-radius: 50% !important;
+  width: 80px !important;
+  height: 80px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 32px !important;
+}
+
+/* Fix hover underline color for working process section */
+.elementor-element-61b7bbc .elementor-icon-box-title,
+.elementor-element-364d26f .elementor-icon-box-title,
+.elementor-element-3047cff .elementor-icon-box-title,
+.elementor-element-33ded01 .elementor-icon-box-title {
+  border-bottom-color: var(--navtara-primary) !important;
+}
+
+.elementor-element-61b7bbc:hover .elementor-icon-box-title,
+.elementor-element-364d26f:hover .elementor-icon-box-title,
+.elementor-element-3047cff:hover .elementor-icon-box-title,
+.elementor-element-33ded01:hover .elementor-icon-box-title {
+  border-bottom-color: var(--navtara-primary) !important;
+}
+
+/* Ensure working-process icon glyphs render inside the brand circles.
+   Some browsers may fall back if the theme icon font isn't present; force
+   sensible font-family, sizing and color so the <i> glyphs are visible. */
+.elementor-element-61b7bbc .elementor-icon-box-icon .elementor-icon i,
+.elementor-element-364d26f .elementor-icon-box-icon .elementor-icon i,
+.elementor-element-3047cff .elementor-icon-box-icon .elementor-icon i,
+.elementor-element-33ded01 .elementor-icon-box-icon .elementor-icon i {
+  color: white !important;
+  /* Try the theme icon font first, then fall back to common icon fonts */
+  font-family: 'extice', 'Font Awesome 5 Free', 'woosw', 'woosw' !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+  /* font-smoothing is handled elsewhere; avoid non-standard 'speak' property */
+}
+
+/* Force the icon-box title pseudo-element underline (theme uses yellow) to use our brand accent */
+.elementor-element-61b7bbc .elementor-icon-box-title:before,
+.elementor-element-61b7bbc .elementor-icon-box-title:after,
+.elementor-element-364d26f .elementor-icon-box-title:before,
+.elementor-element-364d26f .elementor-icon-box-title:after,
+.elementor-element-3047cff .elementor-icon-box-title:before,
+.elementor-element-3047cff .elementor-icon-box-title:after,
+.elementor-element-33ded01 .elementor-icon-box-title:before,
+.elementor-element-33ded01 .elementor-icon-box-title:after,
+.elementor-element-61b7bbc:hover .elementor-icon-box-title:before,
+.elementor-element-364d26f:hover .elementor-icon-box-title:before,
+.elementor-element-3047cff:hover .elementor-icon-box-title:before,
+.elementor-element-33ded01:hover .elementor-icon-box-title:before,
+.elementor-element-61b7bbc:hover .elementor-icon-box-title:after,
+.elementor-element-364d26f:hover .elementor-icon-box-title:after,
+.elementor-element-3047cff:hover .elementor-icon-box-title:after,
+.elementor-element-33ded01:hover .elementor-icon-box-title:after {
+  background-color: var(--navtara-accent) !important;
+  border-bottom-color: var(--navtara-accent) !important;
+}
+
+/* If the title is linked and the underline comes from text-decoration, force color */
+.elementor-element-61b7bbc .elementor-icon-box-title a,
+.elementor-element-364d26f .elementor-icon-box-title a,
+.elementor-element-3047cff .elementor-icon-box-title a,
+.elementor-element-33ded01 .elementor-icon-box-title a {
+  text-decoration-color: var(--navtara-accent) !important;
+}
+
+/* Fix testimonial quote mark color */
+.elementor-testimonial-item .icon i,
+.elementor-testimonial-item .testimonial-content .icon i {
+  color: var(--navtara-primary) !important;
+}
+
+/* Make email text white in contact section */
+.elementor-element-9966575 p,
+.elementor-element-9966575 a {
+  color: white !important;
+}
+
+/* Footer email styling */
+.elementor-element-48d9ff8 a {
+  color: white !important;
+}
+
+/* Comprehensive Footer Styling */
+/* Main footer container */
+.elementor-130 {
+  padding: 60px 0 30px 0 !important;
+}
+
+/* Footer inner container */
+.elementor-element-eeb1a53 .e-con-inner {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* ========== Dropdown chevron alignment fix ========== */
+/* Ensure theme-inserted submenu chevrons (.sub-arrow) are vertically centered
+   next to the menu link text. This removes the theme's negative margins and
+   forces a consistent inline-flex alignment. */
+.hfe-nav-menu .sub-arrow,
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow,
+.elementor-nav-menu-wrapper .sub-arrow,
+.primary-navigation .sub-arrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 0 !important; /* remove theme negative offset */
+  margin-bottom: 0 !important;
+  line-height: 1 !important;
+  font-size: 12px !important;
+  padding: 0 !important;
+}
+
+/* small horizontal spacing so icon sits close to text */
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu .sub-arrow {
+  margin-left: 6px !important;
+}
+
+/* Also ensure any <i> inside the anchor is centered */
+.primary-navigation .menu > .menu-item.menu-item-has-children > a i,
+.elementor-nav-menu-wrapper .menu-item.menu-item-has-children > a i,
+.extice-nav-menu .menu-item.menu-item-has-children > a i {
+  vertical-align: middle !important;
+  line-height: 1 !important;
+}
+
+/* End chevron alignment fix */
+
+/* Company logo and description section */
+.elementor-element-266e572 {
+  text-align: center !important;
+  margin-bottom: 40px !important;
+}
+
+.elementor-element-e5196c1 img {
+  max-width: 200px !important;
+  height: auto !important;
+  margin-bottom: 20px !important;
+}
+
+.elementor-element-54e86dc p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #cccccc !important;
+  max-width: 600px !important;
+  margin: 0 auto 30px auto !important;
+}
+
+/* Divider styling */
+.elementor-element-b474094 {
+  margin: 40px 0 !important;
+}
+
+.elementor-element-b474094 .elementor-divider-separator {
+  border-top: 1px solid #444 !important;
+  width: 100% !important;
+}
+
+/* Footer content grid - Force grid layout */
+.elementor-element-71cd7a2 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+  width: 100% !important;
+}
+
+/* Override any flex properties that might interfere */
+.elementor-element-71cd7a2.e-grid {
+  display: grid !important;
+}
+
+/* Quick Links section */
+.elementor-element-dda2bef {
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.elementor-element-5cd1d34 {
+  margin-bottom: 25px !important;
+}
+
+.elementor-element-5cd1d34 h5 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin-bottom: 25px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.elementor-element-ad26ba5 ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  columns: 1 !important;
+}
+
+.elementor-element-ad26ba5 li {
+  margin-bottom: 12px !important;
+  break-inside: avoid !important;
+}
+
+.elementor-element-ad26ba5 a {
+  color: #cccccc !important;
+  text-decoration: none !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-left: 20px !important;
+}
+
+.elementor-element-ad26ba5 a:hover {
+  color: var(--navtara-accent) !important;
+  transform: translateX(5px) !important;
+}
+
+.elementor-element-ad26ba5 a:before {
+  content: "→" !important;
+  position: absolute !important;
+  left: 0 !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease !important;
+  color: var(--navtara-accent) !important;
+}
+
+.elementor-element-ad26ba5 a:hover:before {
+  opacity: 1 !important;
+}
+
+/* Contact Information section */
+.elementor-element-fe13b3b {
+  text-align: left !important;
+  width: 100% !important;
+}
+
+.elementor-element-b10e555 {
+  margin-bottom: 15px !important;
+}
+
+.elementor-element-b10e555 h5 {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
+}
+
+.elementor-element-b10e555 a {
+  color: var(--navtara-accent) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.elementor-element-b10e555 a:hover {
+  color: var(--navtara-light) !important;
+}
+
+.elementor-element-48d9ff8 {
+  margin-bottom: 25px !important;
+}
+
+.elementor-element-48d9ff8 h5 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  margin-bottom: 0 !important;
+}
+
+.elementor-element-48d9ff8 a {
+  color: #cccccc !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.elementor-element-48d9ff8 a:hover {
+  color: var(--navtara-accent) !important;
+}
+
+/* Address section */
+.elementor-element-fe5d22b {
+  margin-top: 20px !important;
+}
+
+.elementor-element-fe5d22b .elementor-icon-list-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.elementor-element-fe5d22b .elementor-icon-list-icon {
+  color: var(--navtara-accent) !important;
+  font-size: 18px !important;
+  margin-top: 3px !important;
+  flex-shrink: 0 !important;
+}
+
+.elementor-element-fe5d22b .elementor-icon-list-text {
+  color: #cccccc !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  flex: 1 !important;
+}
+
+/* Copyright section */
+.elementor-element-db593c1 {
+  text-align: center !important;
+  margin-top: 40px !important;
+  padding-top: 30px !important;
+  border-top: 1px solid #444 !important;
+  grid-column: 1 / -1 !important;
+}
+
+.elementor-element-db593c1 p {
+  color: #999 !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .elementor-element-71cd7a2 {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  
+  .elementor-element-dda2bef,
+  .elementor-element-fe13b3b {
+    text-align: center !important;
+  }
+  
+  .elementor-130 {
+    padding: 40px 0 20px 0 !important;
+  }
+  
+  .elementor-element-ad26ba5 a {
+    padding-left: 0 !important;
+  }
+  
+  .elementor-element-ad26ba5 a:before {
+    display: none !important;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide search popup elements */
+.search-popup,
+.button-search-popup,
+.mfp-bg,
+.mfp-wrap,
+.mfp-container {
+  display: none !important;
+}
+
+/* Force hero background image override */
+.elementor-132 .elementor-element.elementor-element-ef670b9:not(.elementor-motion-effects-element-type-background),
+.elementor-132 .elementor-element.elementor-element-ef670b9>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+    background-image: url("../assets/images/day_img/andy-li-CpsTAUPoScw-unsplash.jpg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* About Us section left side background image */
+.elementor-element-c2fc25e {
+    background-image: url("../assets/images/day_img/pexels-jan-van-der-wolf-11680885-33537946.jpg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Fix right side image sizing - preserve original dimensions */
+.elementor-element-8c99ff0 img {
+    width: 340px !important;
+    height: 460px !important;
+    object-fit: cover !important;
+}
+
+/* Logo Sizing - Make it larger and add rounded corners */
+.hfe-site-logo-img {
+  height: 80px !important;
+  width: auto !important;
+  max-height: 80px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+@media (max-width: 768px) {
+  .hfe-site-logo-img {
+    height: 60px !important;
+    max-height: 60px !important;
+  }
+}
+
+/* Update icon colors to match brand - About Us section */
+.elementor-icon-list-icon i.extice-icon-star-light {
+  color: var(--navtara-primary) !important;
+}
+
+.elementor-icon-list-icon i.extice-icon-check-mark {
+  color: var(--navtara-secondary) !important;
+}
+
+/* Icon Box icons in About section */
+.elementor-icon-box-icon i.extice-icon-clothespin {
+  color: var(--navtara-accent) !important;
+}
+
+.elementor-icon-box-icon i.extice-icon-sewing-machine {
+  color: var(--navtara-primary) !important;
+}
+
+.elementor-icon-box-icon i.extice-icon-layers {
+  color: var(--navtara-secondary) !important;
+}
+
+.elementor-icon-box-icon i.extice-icon-yarn {
+  color: var(--navtara-accent) !important;
+}
+
+/* Update star icons in section headers */
+.elementor-icon-list-icon .extice-icon-star-light {
+  color: var(--navtara-primary) !important;
+}
+
+/* All check mark icons - STRONGER OVERRIDE */
+.extice-icon-check-mark,
+i.extice-icon-check-mark,
+.elementor-icon-list-icon .extice-icon-check-mark,
+.elementor-icon-list-icon i.extice-icon-check-mark,
+.icon-list-style-extice-yes .elementor-icon-list-icon i.extice-icon-check-mark {
+  color: var(--navtara-secondary) !important;
+  background: transparent !important;
+}
+
+/* General icon color override for brand consistency */
+.elementor-icon-list-icon i[class*="extice-icon-"] {
+  color: var(--navtara-primary) !important;
+}
+
+/* Icon box icons */
+.elementor-icon-box-icon i[class*="extice-icon-"] {
+  color: var(--navtara-secondary) !important;
+}
+
+/* Specific override for yellow styled icons */
+.icon-list-style-extice-yes .elementor-icon-list-icon,
+.icon-list-style-extice-yes .elementor-icon-list-icon i,
+.icon-list-style-extice-yes .elementor-icon-list-icon::before {
+  color: var(--navtara-secondary) !important;
+  background-color: transparent !important;
+}
+
+/* Override any yellow background styles */
+.elementor-icon-list-icon {
+  background: transparent !important;
+}
+
+.elementor-icon-list-icon i {
+  background: transparent !important;
+}
+
+/* Final override with maximum specificity for bullet points */
+body .elementor-widget-icon-list .elementor-icon-list-item .elementor-icon-list-icon i.extice-icon-check-mark,
+body .elementor .icon-list-style-extice-yes .elementor-icon-list-item .elementor-icon-list-icon i.extice-icon-check-mark {
+  color: var(--navtara-secondary) !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Additional override for any remaining yellow elements */
+body .elementor-132 .elementor-icon-list-icon i[class*="extice-icon-check"] {
+  color: var(--navtara-secondary) !important;
+}
+
+/* Header adjustments for larger logo */
+.hfe-site-logo-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Replace yellow/orange gradients with brand colors */
+.c-primary,
+.elementor-heading-title .c-primary {
+  background: var(--navtara-gradient) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Button styling */
+.elementor-button,
+.elementor-button-wrapper .elementor-button {
+  background: var(--navtara-gradient) !important;
+  border: none !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.elementor-button:hover {
+  background: var(--navtara-gradient-reverse) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(26, 71, 42, 0.3) !important;
+}
+
+/* Highlighted text and accents */
+.elementor-widget-text-editor .c-primary,
+.c-primary {
+  color: var(--navtara-primary) !important;
+}
+
+/* Navigation styling and hover effects */
+.menu-item > a .menu-title {
+  color: white !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  padding-bottom: 3px !important;
+}
+
+.menu-item:hover > a .menu-title {
+  color: var(--navtara-accent) !important;
+}
+
+/* Add underline effect on hover */
+.menu-item > a .menu-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) scaleX(0) !important;
+  transform-origin: center center !important;
+  width: 100% !important; /* full width of the text container */
+  height: 2px !important;
+  background: var(--navtara-accent) !important;
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1) !important;
+}
+
+.menu-item:hover > a .menu-title::after {
+  transform: translateX(-50%) scaleX(1) !important;
+}
+
+/* Current page indicator */
+.menu-item.current-menu-item > a .menu-title {
+  color: var(--navtara-accent) !important;
+}
+
+.menu-item.current-menu-item > a .menu-title::after {
+  width: 100% !important;
+}
+
+/* Phone number hover effect - use brand colors instead of yellow */
+.elementor-icon-list-item a:hover,
+.elementor-icon-list-item a:hover .elementor-icon-list-text {
+  color: var(--navtara-accent) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Sub-menu styling */
+.sub-menu .menu-item > a .menu-title {
+  color: #333 !important;
+  background: transparent !important;
+}
+
+.sub-menu .menu-item:hover > a .menu-title {
+  color: var(--navtara-primary) !important;
+  background: rgba(6, 182, 212, 0.1) !important;
+}
+
+/* Form elements and CTAs */
+.wpcf7-submit,
+input[type="submit"] {
+  background: var(--navtara-gradient) !important;
+  border: none !important;
+  color: white !important;
+}
+
+/* Icon colors */
+.elementor-icon {
+  color: var(--navtara-primary) !important;
+}
+
+/* Progress bars and counters */
+.elementor-progress-bar {
+  background: var(--navtara-gradient) !important;
+}
+
+/* Links and interactive elements */
+
+/* Ensure About/Stats counters use the brand underline color on hover */
+/* Targets the Elementor counter underline pseudo-elements */
+.show-divider-yes .elementor-counter .elementor-counter-title:before,
+.show-divider-yes .elementor-counter .elementor-counter-title:after {
+  background-color: rgba(30,64,175,0.15) !important; /* subtle default */
+}
+
+.show-divider-yes .elementor-counter:hover .elementor-counter-title:before,
+.show-divider-yes .elementor-counter:hover .elementor-counter-title:after {
+  background-color: var(--navtara-accent) !important; /* brand accent on hover */
+}
+
+/* If the underline appears via text-decoration, force that color too */
+.elementor-counter .elementor-counter-title a,
+.elementor-counter .elementor-counter-title a:hover {
+  text-decoration-color: var(--navtara-accent) !important;
+}
+a:hover {
+  color: var(--navtara-primary) !important;
+}
+
+/* Section backgrounds with brand gradient */
+.brand-gradient-bg {
+  background: var(--navtara-gradient) !important;
+}
+
+/* Text overlays on brand background */
+.brand-gradient-bg h1,
+.brand-gradient-bg h2,
+.brand-gradient-bg h3,
+.brand-gradient-bg p {
+  color: white !important;
+}
+
+/* Additional navigation fixes for better visibility */
+.main-navigation .menu > .menu-item > a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+/* Center the dropdown chevron/icon vertically next to the menu text */
+.primary-navigation .menu > .menu-item.menu-item-has-children > a,
+.elementor-nav-menu-wrapper .menu-item.menu-item-has-children > a,
+.extice-nav-menu .menu-item.menu-item-has-children > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important; /* spacing between text and icon */
+}
+
+.primary-navigation .menu > .menu-item.menu-item-has-children > a i,
+.elementor-nav-menu-wrapper .menu-item.menu-item-has-children > a i,
+.extice-nav-menu .menu-item.menu-item-has-children > a i {
+  vertical-align: middle !important;
+  line-height: 1 !important;
+}
+
+.main-navigation .menu > .menu-item:hover > a {
+  color: var(--navtara-accent) !important;
+}
+
+/* Button hover effects with brand colors */
+.elementor-button.elementor-button-link:hover {
+  background: var(--navtara-gradient-reverse) !important;
+  color: white !important;
+}
+
+/* Override any yellow/orange hover states */
+a:hover,
+.elementor-icon-list-item:hover,
+.elementor-icon-list-item:hover a,
+.elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-icon-list-item:hover .elementor-icon-list-icon {
+  color: var(--navtara-accent) !important;
+}
+
+/* Service card "Read More" link underline and color */
+.elementor-service-style-1 .service-button a,
+.elementor-service-style-1 .service-button {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.elementor-service-style-1 .service-button a:hover,
+.elementor-service-style-1 .service-button:hover,
+.elementor-service-style-1 .service-button a:focus {
+  color: var(--navtara-accent) !important;
+  text-decoration-color: var(--navtara-accent) !important;
+  text-decoration-line: underline !important;
+  text-underline-position: under !important;
+}
+
+/* Remove duplicated yellow/secondary underline created by theme pseudo-elements
+   Keep only our brand-color underline on the Read More link. */
+.service-item.service-style-1 .service-button span:before,
+.service-item.service-style-1 .service-button span:after {
+  /* disable theme pseudo-element underline (yellow) */
+  display: none !important;
+  background-color: transparent !important;
+}
+
+/* Ensure the anchor itself shows the single brand underline we want */
+.elementor-service-style-1 .service-button a {
+  text-decoration-line: underline !important;
+  text-decoration-color: var(--navtara-accent) !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 3px !important;
+}
+
+/* Ensure header phone number uses brand colors */
+.elementor-element-9d8dc1b .elementor-icon-list-item:hover a,
+.elementor-element-9d8dc1b .elementor-icon-list-item:hover .elementor-icon-list-text {
+  color: var(--navtara-accent) !important;
+}
+
+/* Strong navigation overrides to ensure visibility */
+.hfe-nav-menu a.hfe-menu-item,
+.hfe-nav-menu a.hfe-menu-item:visited,
+.primary-navigation .menu .menu-item a,
+.elementor-nav-menu-wrapper .menu-item a,
+.extice-nav-menu .menu-item a {
+  color: white !important;
+  transition: all 0.3s ease !important;
+}
+
+.hfe-nav-menu a.hfe-menu-item:hover,
+.hfe-nav-menu a.hfe-menu-item:focus,
+.primary-navigation .menu .menu-item:hover a,
+.elementor-nav-menu-wrapper .menu-item:hover a,
+.extice-nav-menu .menu-item:hover a {
+  color: var(--navtara-accent) !important;
+}
+
+/* Navigation underline animation - more specific selectors */
+.primary-navigation .menu .menu-item > a .menu-title,
+.elementor-nav-menu-wrapper .menu-item > a .menu-title,
+.extice-nav-menu .menu-item > a .menu-title {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.primary-navigation .menu .menu-item > a .menu-title::after,
+.elementor-nav-menu-wrapper .menu-item > a .menu-title::after,
+.extice-nav-menu .menu-item > a .menu-title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -4px !important;
+  left: 50% !important;
+  transform: translateX(-50%) scaleX(0) !important;
+  transform-origin: center center !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: var(--navtara-accent) !important;
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1) !important;
+  z-index: 9999 !important; /* ensure underline appears above theme pseudo-elements */
+}
+
+/* ---------- FINAL OVERRIDE FOR WHY CHOOSE US IMAGE ---------- */
+/* Maximum specificity override to force the local image */
+html body .elementor-132 .elementor-element.elementor-element-3789209.e-con-full.animated-fast.e-transform.e-flex.elementor-invisible.e-con.e-child[data-id="3789209"]:not(.elementor-motion-effects-element-type-background),
+html body .elementor-132 .elementor-element.elementor-element-3789209.e-con-full.animated-fast.e-transform.e-flex.elementor-invisible.e-con.e-child[data-id="3789209"]>.elementor-motion-effects-container>.elementor-motion-effects-layer,
+html body .elementor-132 .elementor-element.elementor-element-3789209:not(.elementor-motion-effects-element-type-background),
+html body .elementor-132 .elementor-element.elementor-element-3789209>.elementor-motion-effects-container>.elementor-motion-effects-layer,
+.elementor-132 .elementor-element.elementor-element-3789209:not(.elementor-motion-effects-element-type-background),
+.elementor-132 .elementor-element.elementor-element-3789209>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+  background-image: url("../assets/images/day_img/pexels-pixabay-163726.jpg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ---------- Local left-side image override (higher priority) ---------- */
+/* Force the local image for the left-side 'Why choose us' container so it
+   appears even if the demo/post CSS is loaded from the original demo URL. */
+.elementor-132 .elementor-element.elementor-element-3789209:not(.elementor-motion-effects-element-type-background),
+.elementor-132 .elementor-element.elementor-element-3789209>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+  background-image: url("../assets/images/day_img/pexels-pixabay-163726.jpg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ---------- Icon-box underline color fix for Indian Export Excellence ---------- */
+/* The theme uses --primary (yellow) for the icon-box title pseudo-elements.
+   Force them to use the site's accent color for this specific element. */
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title:before,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title:after,
+.elementor-132 .elementor-element.elementor-element-50e662a:hover .elementor-icon-box-title:before,
+.elementor-132 .elementor-element.elementor-element-50e662a:hover .elementor-icon-box-title:after,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title:hover:before,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title:hover:after {
+  background-color: var(--navtara-accent) !important;
+}
+
+/* Also ensure the title link/text (if present) uses the accent on hover */
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title a {
+  color: inherit !important;
+}
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title:hover,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-title a:hover {
+  color: var(--navtara-accent) !important;
+}
+
+
+.primary-navigation .menu .menu-item:hover > a .menu-title::after,
+.elementor-nav-menu-wrapper .menu-item:hover > a .menu-title::after,
+.extice-nav-menu .menu-item:hover > a .menu-title::after {
+  transform: translateX(-50%) scaleX(1) !important;
+}
+
+/* ---------- ABSOLUTE FINAL OVERRIDE - MUST BE LAST ---------- */
+/* This override MUST work - using all possible selectors and maximum specificity */
+html body div.elementor-132 div.elementor-element.elementor-element-3789209,
+html body .elementor-132 .elementor-element-3789209,
+body .elementor-132 .elementor-element-3789209,
+.elementor-132 .elementor-element-3789209,
+div.elementor-element-3789209,
+#elementor-element-3789209,
+[data-id="3789209"] {
+  background-image: url("../assets/images/day_img/pexels-pixabay-163726.jpg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+
+/* Prevent theme from clipping the underline: make sure list items and anchors allow visible overflow */
+.primary-navigation .menu .menu-item,
+.primary-navigation .menu .menu-item > a,
+.elementor-nav-menu-wrapper .menu-item,
+.elementor-nav-menu-wrapper .menu-item > a,
+.extice-nav-menu .menu-item,
+.extice-nav-menu .menu-item > a {
+  overflow: visible !important;
+}
+
+/* Progress percentage text color -> brand accent */
+.elementor-progress-percentage,
+.elementor-widget-progress .elementor-progress-bar .elementor-progress-percentage {
+  color: var(--navtara-accent) !important;
+  font-weight: 600 !important;
+}
+
+/* Icon color for the 'Indian Export Excellence' icon box */
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-icon .elementor-icon i,
+.elementor-132 .elementor-element.elementor-element-50e662a .elementor-icon-box-icon .elementor-icon {
+  color: var(--navtara-accent) !important;
+  background-color: transparent !important;
+}
+
+/* Change selected text highlight to brand color */
+::selection {
+  background: var(--navtara-accent) !important;
+  color: #fff !important;
+}
+
+/* Some browsers use vendor prefixed selection */
+::-moz-selection {
+  background: var(--navtara-accent) !important;
+  color: #fff !important;
+}
+
+/* Ensure the title container and pseudo-element are on top */
+.primary-navigation .menu .menu-item > a .menu-title,
+.elementor-nav-menu-wrapper .menu-item > a .menu-title,
+.extice-nav-menu .menu-item > a .menu-title {
+  z-index: 10000 !important;
+  overflow: visible !important;
+}

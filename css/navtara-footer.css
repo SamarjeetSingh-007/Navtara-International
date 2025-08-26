@@ -1,0 +1,504 @@
+/* Navtara International - Beautiful Custom Footer Styles */
+
+.navtara-footer {
+    position: relative;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.footer-background {
+    /* show the image with a subtle colored gradient blend */
+    background: linear-gradient(
+        135deg,
+        rgba(30, 41, 59, 0.25) 0%,
+        rgba(15, 23, 42, 0.35) 100%
+    ), url('../assets/images/day_img/pexels-pixabay-262353.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* use scroll to avoid preview/modern-browser fixed behaviour issues */
+    background-attachment: scroll;
+    position: relative;
+    padding: 80px 0 0 0;
+    /* stronger inset shadow so the image reads well under content */
+    box-shadow: 
+        inset 0 80px 120px rgba(0, 0, 0, 0.6),
+        0 -10px 30px rgba(0, 0, 0, 0.35);
+    /* allow performant background-position changes */
+    will-change: background-position;
+}
+
+.footer-overlay {
+    /* subtle overlay that darkens the image but lets it show through */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.35) 0%, rgba(17, 24, 39, 0.45) 100%);
+    z-index: 1;
+    pointer-events: none; /* let interactive content remain reachable */
+}
+
+/* subtle vignette to focus center content */
+.footer-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.22) 60%, rgba(0,0,0,0.6) 100%);
+    mix-blend-mode: multiply;
+    z-index: 2;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section {
+    color: white;
+}
+
+/* Footer Brand Section */
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* Mobile-specific logo centering */
+@media (max-width: 768px) {
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
+
+.footer-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: white;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 2px;
+}
+
+/* Footer Menus */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.footer-menu a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-menu a::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: white;
+    padding-left: 25px;
+}
+
+.footer-menu a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dropdown Functionality */
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle i {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-item:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    padding: 12px 20px;
+    margin: 0;
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a::before {
+    content: '•';
+    left: 5px;
+    color: #3b82f6;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dropdown-menu a:hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: white;
+    padding-left: 25px;
+}
+
+/* Contact Section */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.contact-icon i {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.contact-details {
+    flex: 1;
+    padding-top: 5px;
+}
+
+.contact-details a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #3b82f6;
+}
+
+.contact-details span {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-shadow: 
+        0 -5px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+}
+
+.copyright p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-background {
+    padding: 60px 0 0 0;
+    background-attachment: scroll;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .footer-links,
+    .footer-services,
+    .footer-products,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-menu {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .footer-menu li {
+        margin: 0;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-title {
+        text-align: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+}
+
+/* enable fixed background (parallax-style) for larger screens */
+@media (min-width: 769px) {
+    .footer-background {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 15px;
+    }
+    
+    .footer-content {
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-brand,
+    .footer-links,
+    .footer-services,
+    .footer-products,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-menu {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .footer-menu li {
+        margin: 0;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contact-icon {
+        align-self: center;
+    }
+    
+    .footer-title {
+        text-align: center;
+    }
+    
+    .footer-description {
+        text-align: center;
+    }
+}
+
+/* Animation for footer elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.footer-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-section:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effects for the entire footer */
+.navtara-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: shimmer 3s infinite;
+    z-index: 3;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Ensure footer logo centers consistently on small screens across all pages */
+@media (max-width: 768px) {
+    .navtara-footer .footer-logo {
+        text-align: center !important;
+        display: block;
+        width: 100%;
+    }
+
+    .navtara-footer .footer-logo-img {
+        display: inline-block !important;
+        margin: 0 auto !important;
+        height: 54px; /* slightly reduced for small screens while keeping aspect */
+        max-width: 100%;
+        width: auto;
+    }
+}

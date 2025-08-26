@@ -1,0 +1,29 @@
+/* Navtara International - Template Identity Override */
+/* This CSS hides any visible template references while keeping functionality */
+
+/* Hide any visible demo text or template indicators */
+[data-template-info],
+.template-attribution,
+.demo-notification,
+.theme-credit {
+    display: none !important;
+}
+
+/* Override any visible "Extice" text that might appear */
+.extice-branding,
+.template-name {
+    display: none !important;
+}
+
+/* Ensure Navtara branding is prominent */
+.site-title,
+.site-description {
+    color: #1a472a !important;
+}
+
+/* Hide any footer template credits */
+.wp-block-template-part .site-info a[href*="extice"],
+.wp-block-template-part .site-info a[href*="demo"],
+.wp-block-template-part .site-info a[href*="wpopal"] {
+    display: none !important;
+}
